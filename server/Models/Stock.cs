@@ -11,10 +11,14 @@ namespace server.Models
         public int Id {set; get; }
         public string Symbol {set; get; } = string.Empty;
         public string CompanyName {set; get; } = string.Empty;
-        [Column(TypeName = "dicimal(18,2)")]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Purchase { get; set;}
-        [Column(TypeName = "dicimal(18,2)")]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal LastDiv { get; set;}
+        public string Industry { get; set; } = string.Empty;
+        public long MarketCap { get; set; } 
+        public List<Comment> Comments { get; set; } = new List<Comment>(); 
+
         
     }
 }
